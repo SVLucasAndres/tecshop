@@ -1,10 +1,36 @@
-<ion-content [fullscreen]="true" >
+<ion-menu contentId="main-content">
+  <ion-content class="menu">
+    <ion-title><h1>Menú</h1></ion-title>
+    <ion-list lines="inset">
+      <ion-item (click)="redirectToTab1WithTabs('tab1-with-tabs')">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-item>
+      <ion-item (click)="redirectToCompras('tabCompra')">
+        <ion-icon name="cart"></ion-icon>
+        <ion-label>Carrito de compras</ion-label>
+      </ion-item>
+      <ion-item (click)="toLogin('tabLogin')">
+        <ion-icon name="power"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content [fullscreen]="true" id="main-content">
+  
   <div class="cuerpo">
+    <div class="ion-page" id="main-content">
+        <ion-menu-toggle>
+          <ion-button (click)="abrirMenu()"><ion-icon name="menu"></ion-icon></ion-button>
+        </ion-menu-toggle>
+    </div>
     <h1 class="texto-bienvenido"><b><em>¡Bienvenido!</em></b></h1>
     <MARQUEE class="anuncioMarquee">Nuevas Promociones en microcontroladores Raspberry - Ya disponible el microcontrolador ESP32 - Consigue el nuevo Kit TecShop - Nuevos cursos para principiantes en la electrónica</MARQUEE>
     <div class="acceRap">
-      <h1 style="width: 100%;" class="tituloCat">Nuestro catálogo</h1>
-      <div (click)="redirectToTabCompras()" class="miCarrito recuadro">
+      <h1 style="width: 100%;" class="tituloCat">Menú Principal</h1>
+      <div (click)="redirectToCompras('tabCompra')" class="miCarrito recuadro">
         <p>Mi Carrito</p>
       </div>
       <div class="tendencia recuadro" style="background-image: url('https://www.shutterstock.com/image-illustration/cartoon-campfire-260nw-102248269.jpg');">

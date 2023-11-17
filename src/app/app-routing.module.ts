@@ -6,6 +6,10 @@ const routes: Routes = [
     loadChildren: () => import('./tab-home/tab-home.module').then(m => m.TabHomePageModule),
   },
   {
+    path: 'tabLogin',
+    loadChildren: () => import('./tab-home/tab-home.module').then(m => m.TabHomePageModule),
+  },
+  {
     path: 'tab1-with-tabs',
     loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule),
   },
