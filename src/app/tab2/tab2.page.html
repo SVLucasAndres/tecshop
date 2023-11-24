@@ -1,0 +1,332 @@
+<ion-menu contentId="main-content">
+  <ion-content class="menu">
+    <ion-title><h1>Menú</h1></ion-title>
+    <ion-list lines="inset">
+      <ion-item (click)="redirectToTab1WithTabs('tab1-with-tabs')">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-item>
+      <ion-item (click)="redirectToCompras('tabCompra')">
+        <ion-icon name="cart"></ion-icon>
+        <ion-label>Carrito de compras</ion-label>
+      </ion-item>
+      <ion-item (click)="toArduino('tab-arduino')">
+        <ion-icon name="logo-electron"></ion-icon>
+        <ion-label>Arduino</ion-label>
+      </ion-item>
+      <ion-item (click)="toLogin('tabLogin')">
+        <ion-icon name="power"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content [fullscreen]="true" class="menu" id="main-content">
+  <div class="contenidoall">
+    <div class="header">
+
+
+      
+      <div class="ion-page" id="main-content">
+          <ion-menu-toggle>
+            <ion-button (click)="abrirMenu()"><ion-icon name="menu"></ion-icon></ion-button>
+          </ion-menu-toggle>
+      </div>
+      
+    </div>
+    <br>
+    <br>
+    <div class="titulo-compras">
+      <ion-title><h1>Mi carrito de compras</h1></ion-title>
+    </div>
+    <div class="cuerpo">
+      <ion-card color="success" class="card" id="open-modal7841">
+        <ion-card-header>
+          <ion-card-title>Compra #7841</ion-card-title>
+          <ion-card-subtitle>16/11/2023</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-modal #modal trigger="open-modal7841" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="cash-outline" slot="start"></ion-icon>
+                <ion-label>$20,00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Arduino leonardo, componentes varios</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="calendar-outline" slot="start"></ion-icon>
+                <ion-label>16 de Noviembre del 2023</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="card-outline" slot="start"></ion-icon>
+                <ion-label>Efectivo</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="checkbox-outline" slot="start"></ion-icon>
+                <ion-label>Pagado</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <ion-card color="warning" class="card" id="open-modal7423">
+        <ion-card-header>
+          <ion-card-title>Compra #7423</ion-card-title>
+          <ion-card-subtitle>2/8/2023</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-modal #modal trigger="open-modal7423" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="cash-outline" slot="start"></ion-icon>
+                <ion-label>$30,00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Arduino ESPLORA, componentes varios</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="calendar-outline" slot="start"></ion-icon>
+                <ion-label>2 de Agosto del 2023</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="card-outline" slot="start"></ion-icon>
+                <ion-label>Por crédito a 3 meses</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="checkbox-outline" slot="start"></ion-icon>
+                <ion-label>Pendiente (2 meses)</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <ion-card color="danger" class="card" id="present-alert"> 
+        <ion-card-header>
+          <ion-card-title>Compra #8349</ion-card-title>
+          <ion-card-subtitle>5/7/2023</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-alert
+        trigger="present-alert"
+        header="Compra no disponible"
+        subHeader="Esta compra ya no existe"
+        message="Has rechazado definitivamente esta compra, por lo que no es recuperable"
+        [buttons]="alertButtons"
+      ></ion-alert>
+      <ion-card color="warning" class="card" id="open-modal5283">
+        <ion-card-header>
+          <ion-card-title>Compra #5283</ion-card-title>
+          <ion-card-subtitle>1/7/2023</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-modal #modal trigger="open-modal5283" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="cash-outline" slot="start"></ion-icon>
+                <ion-label>$15,50</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>ESP32</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="calendar-outline" slot="start"></ion-icon>
+                <ion-label>1 de Julio del 2023</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="card-outline" slot="start"></ion-icon>
+                <ion-label>Por crédito a 2</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="checkbox-outline" slot="start"></ion-icon>
+                <ion-label>Pendiente (1 mes ATRASADO)</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <ion-card color="success" class="card" id="open-modal4543">
+        <ion-card-header>
+          <ion-card-title>Compra #4543</ion-card-title>
+          <ion-card-subtitle>6/1/2023</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-modal #modal trigger="open-modal4543" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="cash-outline" slot="start"></ion-icon>
+                <ion-label>$15,00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Arduino Liliypad, kit de resistencias</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="calendar-outline" slot="start"></ion-icon>
+                <ion-label>6 de enero del 2023</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="card-outline" slot="start"></ion-icon>
+                <ion-label>Con tarjeta</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="checkbox-outline" slot="start"></ion-icon>
+                <ion-label>Pagado</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <ion-card color="success" class="card" id="open-modal6489">
+        <ion-card-header>
+          <ion-card-title>Compra #6489</ion-card-title>
+          <ion-card-subtitle>16/12/2022</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-modal #modal trigger="open-modal6489" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="cash-outline" slot="start"></ion-icon>
+                <ion-label>$52,00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Arduino Uno, esplora y leonardo</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="calendar-outline" slot="start"></ion-icon>
+                <ion-label>16 de diciembre del 2023</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="card-outline" slot="start"></ion-icon>
+                <ion-label>A crédito de 5 meses</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="checkbox-outline" slot="start"></ion-icon>
+                <ion-label>Pagados todos los meses</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <ion-card color="success" class="card" id="open-modal1537">
+        <ion-card-header>
+          <ion-card-title>Compra #1537</ion-card-title>
+          <ion-card-subtitle>23/9/2023</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-modal #modal trigger="open-modal1537" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="cash-outline" slot="start"></ion-icon>
+                <ion-label>$15,00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Arduino Nano y corte laser de piezas</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="calendar-outline" slot="start"></ion-icon>
+                <ion-label>23 de septiembre del 2023</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="card-outline" slot="start"></ion-icon>
+                <ion-label>Con pasarela de pago PayPhone</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="checkbox-outline" slot="start"></ion-icon>
+                <ion-label>Pagado</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <ion-card color="success" class="card" id="open-modal473">
+        <ion-card-header>
+          <ion-card-title>Compra #473</ion-card-title>
+          <ion-card-subtitle>1/4/2023</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-modal #modal trigger="open-modal473" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="cash-outline" slot="start"></ion-icon>
+                <ion-label>$20,00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Reparación de arduino mega</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="calendar-outline" slot="start"></ion-icon>
+                <ion-label>1 de abril del 2023</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="card-outline" slot="start"></ion-icon>
+                <ion-label>Efectivo</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="checkbox-outline" slot="start"></ion-icon>
+                <ion-label>Pagado</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <ion-card color="warning" class="card" id="open-modal4375">
+        <ion-card-header>
+          <ion-card-title>Compra #4375</ion-card-title>
+          <ion-card-subtitle>3/3/2023</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-modal #modal trigger="open-modal4375" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="cash-outline" slot="start"></ion-icon>
+                <ion-label>$7,00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Arduino Nano</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="calendar-outline" slot="start"></ion-icon>
+                <ion-label>3 de marzo del 2023</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="card-outline" slot="start"></ion-icon>
+                <ion-label>-</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-icon aria-hidden="true" name="checkbox-outline" slot="start"></ion-icon>
+                <ion-label>Stand By</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,114 @@
+<ion-menu contentId="main-content">
+  <ion-content class="menu">
+    <h1>Menú</h1>
+    <ion-list lines="inset">
+      <ion-item (click)="redirectToTab1WithTabs('tab1-with-tabs')">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-item>
+      <ion-item (click)="redirectToCompras('tabCompra')">
+        <ion-icon name="cart"></ion-icon>
+        <ion-label>Carrito de compras</ion-label>
+      </ion-item>
+      <ion-item (click)="toArduino('tab-arduino')">
+        <ion-icon name="logo-electron"></ion-icon>
+        <ion-label>Arduino</ion-label>
+      </ion-item>
+      <ion-item (click)="toLogin('tabLogin')">
+        <ion-icon name="power"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content [fullscreen]="true">
+  <div class="contenido">
+    <div class="ion-page" id="main-content">
+      <ion-menu-toggle>
+        <ion-button (click)="abrirMenu()"><ion-icon name="menu"></ion-icon></ion-button>
+      </ion-menu-toggle>
+    </div>
+    <br>
+    <br>
+    <div class="titulo compras">
+      <h1>Productos ARDUINO</h1>
+    </div>
+    <div class="productos comunes">
+      <div class="titulo compras">
+        <h1>Los más comunes</h1>
+      </div>
+      <ion-card class="nano card" id="open-toast">
+        <img src="https://velascostore.com/11722-large_default/arduino-nano.jpg" />
+        <ion-card-header>
+          <ion-card-title>Arduino Nano</ion-card-title>
+          <ion-card-subtitle>$7,00</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Un arduino pequeño para pequeño proyectos
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="uno card" id="open-toast1">
+        <img src="https://orellanaelec.com/wp-content/uploads/2022/03/AA001.jpg" />
+        <ion-card-header>
+          <ion-card-title>Arduino UNO</ion-card-title>
+          <ion-card-subtitle>$12,00</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          El más común de todos, el perfecto...
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="mega card" id="open-toast2">
+        <img src="https://megatronica.cc/wp-content/uploads/2022/02/arduino-mega-2560-megatronica.png" />
+        <ion-card-header>
+          <ion-card-title>Arduino MEGA</ion-card-title>
+          <ion-card-subtitle>$20,00</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Uno más grande para los mejores proyectos
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="lilypad card" id="open-toast3">
+        <img src="https://velascostore.com/10222-thickbox_default/arduino-lilypad.jpg" />
+        <ion-card-header>
+          <ion-card-title>Arduino Lilypad</ion-card-title>
+          <ion-card-subtitle>$10,00</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Estético para esos proyectos
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="esplora card" id="open-toast4">
+        <img src="https://avelectronics.cc/wp-content/uploads/2018/03/Esplora1-e1505797746428.jpg" />
+        <ion-card-header>
+          <ion-card-title>Arduino Esplora</ion-card-title>
+          <ion-card-subtitle>$25,00</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Ideal para hacer tu propia consola gamer
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="leonardo card" id="open-toast5">
+        <img src="https://store.arduino.cc/cdn/shop/products/A000057_03.front_deadf61d-5880-4f10-aa7d-8fc524eb3827_934x700.jpg?v=1670234297" />
+        <ion-card-header>
+          <ion-card-title>Arduino Leonardo</ion-card-title>
+          <ion-card-subtitle>$15,00</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Estético para esos proyectos
+        </ion-card-content>
+      </ion-card>
+      <ion-toast trigger="open-toast" message="Productos no disponibles (aún...)" [duration]="5000"></ion-toast>
+      <ion-toast trigger="open-toast1" message="Productos no disponibles (aún...)" [duration]="5000"></ion-toast>
+      <ion-toast trigger="open-toast2" message="Productos no disponibles (aún...)" [duration]="5000"></ion-toast>
+      <ion-toast trigger="open-toast3" message="Productos no disponibles (aún...)" [duration]="5000"></ion-toast>
+      <ion-toast trigger="open-toast4" message="Productos no disponibles (aún...)" [duration]="5000"></ion-toast>
+      <ion-toast trigger="open-toast5" message="Productos no disponibles (aún...)" [duration]="5000"></ion-toast>
+  </div>

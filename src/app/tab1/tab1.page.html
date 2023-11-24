@@ -1,0 +1,92 @@
+<ion-menu contentId="main-content">
+  <ion-content class="menu">
+    <ion-title><h1>Menú</h1></ion-title>
+    <ion-list lines="inset">
+      <ion-item (click)="redirectToTab1WithTabs('tab1-with-tabs')">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-item>
+      <ion-item (click)="redirectToCompras('tabCompra')">
+        <ion-icon name="cart"></ion-icon>
+        <ion-label>Carrito de compras</ion-label>
+      </ion-item>
+      <ion-item (click)="toArduino('tab-arduino')">
+        <ion-icon name="logo-electron"></ion-icon>
+        <ion-label>Arduino</ion-label>
+      </ion-item>
+      <ion-item (click)="toLogin('tabLogin')">
+        <ion-icon name="power"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content [fullscreen]="true" id="main-content">
+  
+  <div class="cuerpo">
+    <div class="ion-page" id="main-content">
+        <ion-menu-toggle>
+          <ion-button (click)="abrirMenu()"><ion-icon name="menu"></ion-icon></ion-button>
+        </ion-menu-toggle>
+    </div>
+    <h1 class="texto-bienvenido" style="color: black;"><b><em>¡Bienvenido!</em></b></h1>
+    <div class="acceRap">
+      <h1 style="width: 100%;" class="tituloCat">Menú Principal</h1>
+      <div (click)="redirectToCompras('tabCompra')" style="background-image: url('https://play-lh.googleusercontent.com/qKZLpzfOHvPvCA-oEQpTBxajRAF6MnYQ029x5lBkewcDt_wpgNFZoIro8uk_MV-1Sw');" class="miCarrito recuadro">
+        <p>Mi Carrito</p>
+      </div>
+      <div (click)="toArduino('tab-arduino')" class="arduino recuadro" style="background-image: url('https://store-usa.arduino.cc/cdn/shop/products/A000066_03.front_970c6014-61ab-4226-a20f-14cc6d8d682c_934x700.jpg?v=1629816078');">
+        <p>Arduino</p>
+      </div>
+      <div class="raspberry recuadro" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Raspberry_Pi_4_Model_B_-_Side.jpg/640px-Raspberry_Pi_4_Model_B_-_Side.jpg');">
+        <p>Raspberry</p>
+      </div>
+      </div>
+      <ion-title><h1 style="color: black; text-align: center;"><b>Mis compras recientes</b></h1></ion-title>
+    <ion-list >
+      <ion-item  class="arduinoCompra itemFactura">
+        <div class="concepto">
+          Arduino Leonardo
+        </div>
+        <div class="monto">
+          $15,00
+        </div>
+      </ion-item>
+      <ion-item  class="raspberryCompra itemFactura">
+        <div class="concepto">
+          Raspberry PI4
+        </div>
+        <div class="monto">
+          $19,59
+        </div>
+      </ion-item>
+      <ion-item  class="cablesCompra itemFactura">
+        <div class="concepto">
+          Cable UTP (metro) y conectores LJ45
+        </div>
+        <div class="monto">
+          $3,60
+        </div>
+      </ion-item>
+      <ion-item  class="esp32Compra itemFactura">
+        <div class="concepto">
+          Módulo ESP32 Devkit V1
+        </div>
+        <div class="monto">
+          $15,50
+        </div>
+      </ion-item>
+      <ion-item  class="modulosCompra itemFactura">
+        <div class="concepto">
+          Módulo Bluetooth y de sensor de movimiento
+        </div>
+        <div class="monto">
+          $9,80
+        </div>
+      </ion-item>
+    </ion-list>
+    </div>
+    
+</ion-content>

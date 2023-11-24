@@ -1,0 +1,30 @@
+.titulo-compras{
+    text-align: center;
+    color:black;
+}
+.ion-page{
+    position: relative;
+}
+.cuerpo{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    
+}
+.contenidoall{
+    background-color: #EEF4ED;
+}
+.card{
+    width: 90%;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.card:active {
+    width: 100%;
+}
+.ion-page{
+    width: 0;
+    height: 0;
+  }
