@@ -29,6 +29,9 @@ export class Tab2Page {
   abrirMenu() {
     this.menuService.toggleMenu();
   }
+  ToTab1WithTabs() {
+    this.router.navigate(['tab1-with-tabs']);
+  }
 }
 
 

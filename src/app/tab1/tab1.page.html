@@ -26,11 +26,21 @@
 <ion-content [fullscreen]="true" id="main-content">
   
   <div class="cuerpo">
-    <div class="ion-page" id="main-content">
-        <ion-menu-toggle>
-          <ion-button (click)="abrirMenu()"><ion-icon name="menu"></ion-icon></ion-button>
-        </ion-menu-toggle>
-    </div>
+    <ion-header>
+      <ion-toolbar style="display: flex;background-color: #1D84B5;">
+          <ion-buttons slot="end">
+            <ion-menu-toggle>
+              <ion-button (click)="abrirMenu()"><ion-icon name="menu"></ion-icon></ion-button>
+            </ion-menu-toggle>
+          </ion-buttons>
+          <ion-title width="60%"><h3 style="color: #EEF4ED;">Mi carrito de compras</h3></ion-title>
+          <ion-buttons slot="start">
+            <ion-menu-toggle>
+              <ion-button (click)="toLogin('tabLogin')"><ion-icon name="power-outline"></ion-icon></ion-button>
+            </ion-menu-toggle>
+          </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
     <h1 class="texto-bienvenido" style="color: black;"><b><em>¡Bienvenido!</em></b></h1>
     <div class="acceRap">
       <h1 style="width: 100%;" class="tituloCat">Menú Principal</h1>

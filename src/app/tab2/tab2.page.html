@@ -24,23 +24,23 @@
 </ion-menu>
 
 <ion-content [fullscreen]="true" class="menu" id="main-content">
-  <div class="contenidoall">
-    <div class="header">
-
-
-      
-      <div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar style="display: flex;background-color: #1D84B5;">
+        <ion-buttons slot="end">
           <ion-menu-toggle>
             <ion-button (click)="abrirMenu()"><ion-icon name="menu"></ion-icon></ion-button>
           </ion-menu-toggle>
-      </div>
-      
-    </div>
-    <br>
-    <br>
-    <div class="titulo-compras">
-      <ion-title><h1>Mi carrito de compras</h1></ion-title>
-    </div>
+        </ion-buttons>
+        <ion-title width="60%"><h3 style="color: #EEF4ED;">Mi carrito de compras</h3></ion-title>
+        <ion-buttons slot="start">
+          <ion-menu-toggle>
+            <ion-button (click)="redirectToTab1WithTabs('tab1-with-tabs')"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+          </ion-menu-toggle>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <div class="contenidoall">
+    
     <div class="cuerpo">
       <ion-card color="success" class="card" id="open-modal7841">
         <ion-card-header>
