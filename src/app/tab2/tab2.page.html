@@ -1,0 +1,44 @@
+<ion-menu contentId="main-content">
+  <ion-content class="menu">
+    <ion-title><h1>Menú</h1></ion-title>
+    <ion-list lines="inset">
+      <ion-item (click)="redirectToTab1WithTabs('tab1-with-tabs')">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-item>
+      <ion-item (click)="redirectToCompras('tabCompra')">
+        <ion-icon name="cart"></ion-icon>
+        <ion-label>Carrito de compras</ion-label>
+      </ion-item>
+      <ion-item (click)="toArduino('tab-arduino')">
+        <ion-icon name="logo-electron"></ion-icon>
+        <ion-label>Arduino</ion-label>
+      </ion-item>
+      <ion-item (click)="toLogin('tabLogin')">
+        <ion-icon name="power"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content [fullscreen]="true" class="menu" id="main-content">
+  <div class="header">
+
+
+    <div class="titulo-compras">
+      <ion-title><h1>Mi carrito de compras</h1></ion-title>
+    </div>
+    <div class="ion-page" id="main-content">
+        <ion-menu-toggle>
+          <ion-button (click)="abrirMenu()"><ion-icon name="menu"></ion-icon></ion-button>
+        </ion-menu-toggle>
+    </div>
+    
+  </div>
+  <div class="cuerpo">
+    <ion-icon name="alert-circle" style="font-size: 10rem; color: #222"></ion-icon>
+    <h3 style="color: #383838; font-size: 1.5rem;">No hay nada en tu carrito de compras</h3>
+  </div>
+</ion-content>

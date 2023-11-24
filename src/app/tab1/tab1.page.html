@@ -1,0 +1,105 @@
+<ion-menu contentId="main-content">
+  <ion-content class="menu">
+    <ion-title><h1>Menú</h1></ion-title>
+    <ion-list lines="inset">
+      <ion-item (click)="redirectToTab1WithTabs('tab1-with-tabs')">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-item>
+      <ion-item (click)="redirectToCompras('tabCompra')">
+        <ion-icon name="cart"></ion-icon>
+        <ion-label>Carrito de compras</ion-label>
+      </ion-item>
+      <ion-item (click)="toArduino('tab-arduino')">
+        <ion-icon name="logo-electron"></ion-icon>
+        <ion-label>Arduino</ion-label>
+      </ion-item>
+      <ion-item (click)="toLogin('tabLogin')">
+        <ion-icon name="power"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content [fullscreen]="true" id="main-content">
+  
+  <div class="cuerpo">
+    <div class="ion-page" id="main-content">
+        <ion-menu-toggle>
+          <ion-button (click)="abrirMenu()"><ion-icon name="menu"></ion-icon></ion-button>
+        </ion-menu-toggle>
+    </div>
+    <h1 class="texto-bienvenido"><b><em>¡Bienvenido!</em></b></h1>
+    <MARQUEE class="anuncioMarquee">Nuevas Promociones en microcontroladores Raspberry - Ya disponible el microcontrolador ESP32 - Consigue el nuevo Kit TecShop - Nuevos cursos para principiantes en la electrónica</MARQUEE>
+    <div class="acceRap">
+      <h1 style="width: 100%;" class="tituloCat">Menú Principal</h1>
+      <div (click)="redirectToCompras('tabCompra')" class="miCarrito recuadro">
+        <p>Mi Carrito</p>
+      </div>
+      <div class="tendencia recuadro" style="background-image: url('https://www.shutterstock.com/image-illustration/cartoon-campfire-260nw-102248269.jpg');">
+        <p>En tendencia</p>
+      </div>
+      <div class="arduino recuadro" style="background-image: url('https://store-usa.arduino.cc/cdn/shop/products/A000066_03.front_970c6014-61ab-4226-a20f-14cc6d8d682c_934x700.jpg?v=1629816078');">
+        <p>Arduino</p>
+      </div>
+      <div class="raspberry recuadro" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Raspberry_Pi_4_Model_B_-_Side.jpg/640px-Raspberry_Pi_4_Model_B_-_Side.jpg');">
+        <p>Raspberry</p>
+      </div>
+      <div class="espressif recuadro" style="background-image: url('https://megatronica.cc/wp-content/uploads/2021/12/ESP-32.jpg');">
+        <p>Dispositivos de Espressif</p>
+      </div>
+      <div class="fuentes recuadro" style="background-image: url('data:image/png;base64,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');">
+        <p>Fuentes de Poder</p>
+      </div>
+      <div class="modulos recuadro" style="background-image: url('https://www.diarioelectronicohoy.com/imagenes/2015/11/Matrix_Flowcode.jpg');">
+        <p>Modulos y Otros</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <ion-list>
+      <ion-item class="arduinoCompra itemFactura">
+        <div class="concepto">
+          Arduino Leonardo
+        </div>
+        <div class="monto">
+          $15,00
+        </div>
+      </ion-item>
+      <ion-item class="raspberryCompra itemFactura">
+        <div class="concepto">
+          Raspberry PI4
+        </div>
+        <div class="monto">
+          $19,59
+        </div>
+      </ion-item>
+      <ion-item class="cablesCompra itemFactura">
+        <div class="concepto">
+          Cable UTP (metro) y conectores LJ45
+        </div>
+        <div class="monto">
+          $3,60
+        </div>
+      </ion-item>
+      <ion-item class="esp32Compra itemFactura">
+        <div class="concepto">
+          Módulo ESP32 Devkit V1
+        </div>
+        <div class="monto">
+          $15,50
+        </div>
+      </ion-item>
+      <ion-item class="modulosCompra itemFactura">
+        <div class="concepto">
+          Módulo Bluetooth y de sensor de movimiento
+        </div>
+        <div class="monto">
+          $9,80
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

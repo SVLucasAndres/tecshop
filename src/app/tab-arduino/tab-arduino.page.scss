@@ -1,0 +1,14 @@
+.card{
+    width:40%;
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenido{
+    background: linear-gradient(to right, rgb(0, 153, 255), rgb(127, 150, 228));
+}
+.titulo{
+    width: 100%;
+    text-align: center;
+}
